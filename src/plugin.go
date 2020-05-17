@@ -2,7 +2,7 @@ package main
 
 import (
 	auth "github.com/docker/go-plugins-helpers/authorization"
-    "conf"
+    "github.com/itsfoss/docksec/conf"
 )
 
 type plugin struct {
@@ -13,7 +13,7 @@ type plugin struct {
 }
 
 func newPlugin() (*plugin, error) {
-    return &authz{name: "docksec", port: conf.GetPort(), socket: conf.GetSockStat(), desc: conf.GetDescStat()}, nil
+    return &plugin{name: "docksec", port: conf.GetPort(), socket: conf.GetSockStat(), desc: conf.GetDescStat()}, nil
 }
 
 func (plug *plugin) AuthZReq(req auth.Request) auth.Response {
