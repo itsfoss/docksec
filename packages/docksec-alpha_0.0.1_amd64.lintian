@@ -1,0 +1,15 @@
+W: docksec-alpha: hardening-no-relro usr/bin/docksec
+W: docksec-alpha: hardening-no-pie usr/bin/docksec
+W: docksec-alpha: missing-depends-line
+E: docksec-alpha: changelog-file-missing-in-native-package
+E: docksec-alpha: file-in-etc-not-marked-as-conffile etc/docksec/main.json
+E: docksec-alpha: copyright-file-contains-full-gpl-license
+E: docksec-alpha: copyright-should-refer-to-common-license-file-for-gpl
+E: docksec-alpha: package-has-no-description
+W: docksec-alpha: no-section-field
+W: docksec-alpha: binary-without-manpage usr/bin/docksec
+E: docksec-alpha: md5sums-lists-nonexistent-file usr/share/doc/docksec-alpha/copyrigh
+W: docksec-alpha: file-missing-in-md5sums usr/share/doc/docksec-alpha/copyright
+W: docksec-alpha: maintainer-script-ignores-errors postinst
+W: docksec-alpha: maintainer-script-calls-systemctl postinst:15
+W: docksec-alpha: maintainer-script-calls-systemctl postinst:19
