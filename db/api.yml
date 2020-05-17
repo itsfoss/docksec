@@ -1,0 +1,38 @@
+methods:
+      - commands:
+          - "ps"
+        method: "GET"
+        path: 
+          - "/[^/].+/containers/json$"
+      - commands:
+          - "inspect"
+        method: "get"
+        path: 
+          - "/[^/].+/images/[^/].+/json$"
+          - "/[^/].+/contaners/[^/].+/json$"
+          - "/[^/].+/networks/[^/].+/json$"
+      - commands:
+          - "run"
+          - "create"
+          - "container create"
+        method: "POST"
+        path: 
+          - "/[^/].+/containers/create?name=[a-zA-Z0-9]+$"
+      - commands:
+          - "top"
+          - "container top"
+        method: "get"
+        path: 
+          - "/[^/].+/containers/[^/].+/top$"
+      - commands:
+          - "log"
+          - "ccontainer logs"
+        method: "get"
+        path: 
+          - "/[^/].+/containers/([^/].+)/logs?"
+      - commands:
+          - "exec"
+          - "ccontainer exec"
+        method: "POST"
+        path: 
+          - "/[^/].+/containers/([^/].+)/exec$"

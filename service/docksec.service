@@ -1,0 +1,10 @@
+[Unit]
+Description=admin-authz
+Before=docker.service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/admin-authz
+
+[Install]
+WantedBy=multi-user.target
