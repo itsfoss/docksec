@@ -6,7 +6,6 @@ import (
     re "regexp"
     "github.com/sirupsen/logrus"
     "github.com/go-yaml/yaml"
-    "fmt"
 )
 
 type Config struct {
@@ -60,7 +59,7 @@ func init(){
     if con, err = io.ReadFile(db); err != nil {
         logrus.Fatal(err)
     }
-    if err := yaml.Unmarshal(con, &mapd){
+    if err = yaml.Unmarshal(con, &mapd); err != nil {
         logrus.Fatal(err)
     }
     for _, jdata := range jd.Plug.Bl {

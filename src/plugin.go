@@ -13,7 +13,7 @@ type plugin struct {
 }
 
 func newPlugin() (*plugin, error) {
-    return &authz{name: "admin-authz", port: conf.GetPort(), socket: conf.GetSockStat(), desc: conf.GetDescStat()}, nil
+    return &authz{name: "docksec", port: conf.GetPort(), socket: conf.GetSockStat(), desc: conf.GetDescStat()}, nil
 }
 
 func (plug *plugin) AuthZReq(req auth.Request) auth.Response {
