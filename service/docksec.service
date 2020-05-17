@@ -1,10 +1,10 @@
 [Unit]
-Description=admin-authz
+Description=docksec
 Before=docker.service
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/admin-authz
+ExecStart=/usr/bin/docksec
 
 [Install]
 WantedBy=multi-user.target
