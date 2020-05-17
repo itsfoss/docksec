@@ -1,0 +1,22 @@
+{
+    "plugin": {
+        "port": 6767,
+        "socket": true,
+        "description": true,
+        "commands": [
+            {
+                "cmd": "ps",
+                "allow": false,
+                "dmsg": "No permission",
+                "amsg": "Admin restricted"
+            },
+            {
+                "cmd": "exec",
+                "dmsg": "Not allowed"
+            }
+        ]
+    },
+    "handler": {
+        "editor": "vim"
+    }
+}
