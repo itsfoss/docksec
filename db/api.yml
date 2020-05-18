@@ -27,7 +27,7 @@ methods:
         path: 
           - "/v1.40/containers/v1.40/top$"
       - commands:
-          - "log"
+          - "logs"
           - "ccontainer logs"
         method: "GET"
         path: 
