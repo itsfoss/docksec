@@ -3,36 +3,38 @@ methods:
           - "ps"
         method: "GET"
         path: 
-          - "/[^/].+/containers/json$"
+          - "/v1.40/containers/json$"
+          - "/v1.40/containers/json?.+"
       - commands:
           - "inspect"
-        method: "get"
+        method: "GET"
         path: 
-          - "/[^/].+/images/[^/].+/json$"
-          - "/[^/].+/contaners/[^/].+/json$"
-          - "/[^/].+/networks/[^/].+/json$"
+          - "/v1.40/images/[a-zA-Z0-9]/json$"
+          - "/v1.40/contaners/[a-zA-Z0-9]/json$"
+          - "/v1.40/networks/[a-zA-Z0-9]$"
       - commands:
           - "run"
           - "create"
           - "container create"
         method: "POST"
-        path: 
-          - "/[^/].+/containers/create?name=[a-zA-Z0-9]+$"
+        path:
+          - "/v1.40/containers/create$"
+          - "/v1.40/containers/create?.+"
       - commands:
           - "top"
           - "container top"
-        method: "get"
+        method: "GET"
         path: 
-          - "/[^/].+/containers/[^/].+/top$"
+          - "/v1.40/containers/v1.40/top$"
       - commands:
           - "log"
           - "ccontainer logs"
-        method: "get"
+        method: "GET"
         path: 
-          - "/[^/].+/containers/([^/].+)/logs?"
+          - "/v1.40/containers/(v1.40)/logs?"
       - commands:
           - "exec"
           - "ccontainer exec"
         method: "POST"
         path: 
-          - "/[^/].+/containers/([^/].+)/exec$"
+          - "/v1.40/containers/(v1.40)/exec$"
