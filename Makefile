@@ -11,3 +11,6 @@ install:
 	install -m700 -o0 -g0 skel/main.json /etc/docksec/main.json
 	install -m700 -o0 -g0 db/api.yml /usr/share/docksec/api.yml
 
+clean:
+	rm -rf bin/*
+
